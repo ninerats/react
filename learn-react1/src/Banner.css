@@ -1,0 +1,17 @@
+.banner {
+  background: var(--bs-info);
+  color: white;
+  padding: .5rem 2rem;
+  text-align: center;
+  margin: 1rem 0; 
+}
+
+.banner-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.banner-subtitle {
+  font-size: 1.25rem;
+  opacity: 0.9;
+}

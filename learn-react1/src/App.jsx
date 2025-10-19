@@ -1,11 +1,17 @@
-import { useState } from 'react'
+
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Button from './button.jsx'
+import Banner from './banner.jsx'
+import { useState } from 'react'
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [totalCount, setTotalCount] = useState(0);
 
+  const incGlobal = () => setTotalCount(totalCount + 1)
   return (
     <>
       <div>
@@ -18,9 +24,11 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+        <Banner text={"Total Button Clicks: " + totalCount}/>
+        <div class="d-flex justify-content-center gap-3 mt-3">
+        <Button onGlobalClick={incGlobal} />     
+           <Button onGlobalClick={incGlobal}/>
+           </div>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
