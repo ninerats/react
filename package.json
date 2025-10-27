@@ -1,4 +1,15 @@
 {
+  "name": "react-monorepo",
+  "private": true,
+  "workspaces": [
+    "react-libs",
+    "*"
+  ],
+  "scripts": {
+    "install:all": "npm install --workspaces",
+    "build": "npm run -ws build",
+    "dev:lib": "npm run -w @yourscope/react-libs dev"
+  },
   "dependencies": {
     "bootstrap": "^5.3.8"
   },

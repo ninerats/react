@@ -7,8 +7,9 @@
 export { default as Banner } from './Banner'
 export { default as Button } from './Button'
 
-// default export for convenience
-export default {
-  Banner,
-  Button,
-}
+
+// If you REALLY want a default export too, do this instead:
+// import Banner from './Banner';
+// import Button from './Button';
+// export { Banner, Button };
+// export default { Banner, Button };
