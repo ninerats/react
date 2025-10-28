@@ -1,42 +1,46 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Layout + positioning owned by the App */
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #ffffff;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.app-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+/* Toggles stacked under the button */
+.controls {
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  display: grid;
+  gap: 0.75rem;
+  justify-items: start;
+}
+
+
+.galaxy-s23-container {
+  width: 360px; /* Scaled-down width (1/3 of 1080px) */
+  height: 780px; /* Scaled-down height to maintain 19.5:9 aspect ratio (360 * 2.167 ≈ 780) */
+  border: 2px solid grey; /* Grey border */
+  border-radius: 16px; /* Rounded corners */
+  box-sizing: border-box; /* Ensures border is included in dimensions */
+  overflow: auto; /* Allows scrolling if content overflows */
+  margin: 20px 20px auto; /* Centers with some top/bottom margin */
+  background-color: #fff; /* White background for visibility */
+}
+
+/* Responsive fallback for smaller screens */
+@media (max-width: 400px) {
+  .galaxy-s23-container {
+    width: 90vw; /* Use 90% of viewport width */
+    height: calc(90vw * 2.167); /* Maintain aspect ratio */
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }

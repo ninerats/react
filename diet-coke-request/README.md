@@ -1,4 +1,12 @@
-# React + Vite
+#Diet Coke Request Version 2
+
+This is basically a web version of an "app" for my wifes Galaxy 22S.  It will allow her to click a button, which will IM me that she wants a diet coke.
+
+## Componets
+
+- Augmented coding with [ChatGPT 5](https://chatgpt.com/g/g-p-68ed53bb6c18819197d0331b68b3e94e-learning-react/c/68ffc732-7ee4-832b-a588-5d8ecd9afca2)
+
+## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
